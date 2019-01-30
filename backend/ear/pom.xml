@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>gabinet</artifactId>
+        <groupId>pl.uam.gabinet</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>pl.uam.gabinet</groupId>
+    <artifactId>ear</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>ear</packaging>
+    <name>ear</name>
+
+    <!--<build>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.wildfly.plugins</groupId>-->
+                <!--<artifactId>wildfly-maven-plugin</artifactId>-->
+                <!--<version>2.0.0.Final</version>-->
+                <!--<configuration>-->
+                    <!--<hostname>127.0.0.1</hostname>-->
+                    <!--<port>9990</port>-->
+                    <!--<username>admin</username>-->
+                    <!--<password>admin</password>-->
+                    <!--<name>ear.ear</name>-->
+                <!--</configuration>-->
+                <!--<executions>-->
+                    <!--&lt;!&ndash; Undeploy the application on clean &ndash;&gt;-->
+                    <!--<execution>-->
+                        <!--<id>undeploy</id>-->
+                        <!--<phase>clean</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>undeploy</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<ignoreMissingDeployment>true</ignoreMissingDeployment>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+
+                    <!--&lt;!&ndash; Deploy the application on install &ndash;&gt;-->
+                    <!--<execution>-->
+                        <!--<id>deploy</id>-->
+                        <!--<phase>install</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>deploy</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</build>-->
+
+    <dependencies>
+        <dependency>
+            <groupId>pl.uam.gabinet</groupId>
+            <artifactId>ejb</artifactId>
+            <version>${project.version}</version>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.uam.gabinet</groupId>
+            <artifactId>war</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+</project>
