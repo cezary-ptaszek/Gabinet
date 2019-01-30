@@ -1,4 +1,7 @@
 pl\uam\gabinet\entities\VisitEntity.class
-pl\uam\gabinet\entities\AbstractBaseEntity.class
+pl\uam\gabinet\entities\DoctorEntity.class
 pl\uam\gabinet\VisitDao.class
+pl\uam\gabinet\entities\PatientEntity.class
+pl\uam\gabinet\entities\AbstractBaseEntity.class
+pl\uam\gabinet\entities\MedicalTreatmentEntity.class
 pl\uam\gabinet\NewSessionBean.class
