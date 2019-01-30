@@ -14,44 +14,44 @@
     <packaging>ear</packaging>
     <name>ear</name>
 
-    <!--<build>-->
-        <!--<plugins>-->
-            <!--<plugin>-->
-                <!--<groupId>org.wildfly.plugins</groupId>-->
-                <!--<artifactId>wildfly-maven-plugin</artifactId>-->
-                <!--<version>2.0.0.Final</version>-->
-                <!--<configuration>-->
-                    <!--<hostname>127.0.0.1</hostname>-->
-                    <!--<port>9990</port>-->
-                    <!--<username>admin</username>-->
-                    <!--<password>admin</password>-->
-                    <!--<name>ear.ear</name>-->
-                <!--</configuration>-->
-                <!--<executions>-->
-                    <!--&lt;!&ndash; Undeploy the application on clean &ndash;&gt;-->
-                    <!--<execution>-->
-                        <!--<id>undeploy</id>-->
-                        <!--<phase>clean</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>undeploy</goal>-->
-                        <!--</goals>-->
-                        <!--<configuration>-->
-                            <!--<ignoreMissingDeployment>true</ignoreMissingDeployment>-->
-                        <!--</configuration>-->
-                    <!--</execution>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>2.0.0.Final</version>
+                <configuration>
+                    <hostname>127.0.0.1</hostname>
+                    <port>9990</port>
+                    <username>admin</username>
+                    <password>admin</password>
+                    <name>ear-1.0.0-SNAPSHOT.ear</name>
+                </configuration>
+                <executions>
+                    <!-- Undeploy the application on clean -->
+                    <execution>
+                        <id>undeploy</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>undeploy</goal>
+                        </goals>
+                        <configuration>
+                            <ignoreMissingDeployment>true</ignoreMissingDeployment>
+                        </configuration>
+                    </execution>
 
-                    <!--&lt;!&ndash; Deploy the application on install &ndash;&gt;-->
-                    <!--<execution>-->
-                        <!--<id>deploy</id>-->
-                        <!--<phase>install</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>deploy</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-            <!--</plugin>-->
-        <!--</plugins>-->
-    <!--</build>-->
+                    <!-- Deploy the application on install -->
+                    <execution>
+                        <id>deploy</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
         <dependency>

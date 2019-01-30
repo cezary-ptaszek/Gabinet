@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1"
-	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="
+			 xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:schemaLocation="
         http://xmlns.jcp.org/xml/ns/persistence
         http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="primary">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<jta-data-source>java:jboss/datasources/visit</jta-data-source>
+		<jta-data-source>java:jboss/datasources/gabinet</jta-data-source>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
 			<property name="hibernate.show_sql" value="true" />
 			<property name="format_sql" value = "true"/>
 			<property name="use_sql_comments" value = "true"/>
 			<property name="hibernate.generate_statistics" value="true" />
- 			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
-			<!--<property name="hibernate.enable_lazy_load_no_trans" value="true"/>-->
-			<property name="hibernate.enable_lazy_load_no_trans"
-				value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			<!--<property name="hibernate.enable_lazy_load_no_trans"-->
+			<!--value="true" />-->
 		</properties>
 	</persistence-unit>
 </persistence>
