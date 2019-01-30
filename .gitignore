@@ -6,7 +6,7 @@
 *.project
 *.settings
 /bin/*
-/target/*
+*/target/*
 
 #gradle
 .gradle
