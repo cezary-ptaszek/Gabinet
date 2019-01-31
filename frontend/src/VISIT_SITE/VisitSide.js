@@ -8,7 +8,7 @@ class VisitSite extends Component {
     constructor() {
         super()
         this.state = {
-            selectedMedicineVisitId: 0
+            selectedMedicineVisitId: 1
         }
     }
 

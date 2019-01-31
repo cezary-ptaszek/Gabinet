@@ -1,0 +1,9 @@
+.detailWrapper{
+    border-style: ridge;
+    height: 30vh;
+    width: 60vw;
+    position: relative;
+    float: left;
+    margin: 0 2vw ;
+    padding: 5%;
+}
