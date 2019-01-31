@@ -10,7 +10,7 @@ class VisitDetailWidget extends Component{
                 <p>id: {this.props.id}</p>
                 <p>title: {this.props.title}</p>
                 <p>price: {this.props.price}</p>
-                <p>rating: {this.props.rating}</p>
+                <p>opinion: {this.props.rating}</p>
                 <p>releaseDate: {this.props.releaseDate}</p>
             </div>
         )
