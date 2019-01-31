@@ -1,6 +1,5 @@
 package pl.uam.gabinet.visit;
 
-
 import pl.uam.gabinet.entities.VisitEntity;
 
 import java.io.Serializable;
@@ -8,10 +7,10 @@ import java.io.Serializable;
 public class VisitDto implements Serializable {
 
     private Long id;
-    private String title;
-    private double price;
-    private double rating;
-    private int releaseDate;
+    private String patient;
+    private String doctor;
+    private String date;
+    private String info;
 
     public VisitDto() {
 
@@ -21,20 +20,20 @@ public class VisitDto implements Serializable {
         id = aId;
     }
 
-    public VisitDto(Long id, String author, String title, double price, double rating, int releaseDate) {
+    public VisitDto(Long id, String date, String info, String patient, String doctor) {
         this.id = id;
-        this.title = title;
-        this.price = price;
-        this.rating = rating;
-        this.releaseDate = releaseDate;
+        this.doctor = doctor;
+        this.patient = patient;
+        this.date = date;
+        this.info = info;
     }
 
     public VisitDto(VisitEntity visitEntity) {
         this.id = visitEntity.getId();
-        this.title = visitEntity.getTitle();
-        this.price = visitEntity.getPrice();
-        this.rating = visitEntity.getRating();
-        this.releaseDate = visitEntity.getReleaseDate();
+        this.patient = visitEntity.getPatient();
+        this.doctor = visitEntity.getDoctor();
+        this.date = visitEntity.getDate();
+        this.info = visitEntity.getInfo();
     }
 
     public void setId(Long id) {
@@ -45,36 +44,36 @@ public class VisitDto implements Serializable {
         return id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getDate() {
+        return date;
     }
 
-    public double getPrice() {
-        return price;
+    public String getInfo() {
+        return info;
     }
 
-    public double getRating() {
-        return rating;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public int getReleaseDate() {
-        return releaseDate;
+    public void setInfo(String info) {
+        this.info = info;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getPatient() {
+        return patient;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setPatient(String patient) {
+        this.patient = patient;
     }
 
-    public void setRating(double rating) {
-        this.rating = rating;
+    public String getDoctor() {
+        return doctor;
     }
 
-    public void setReleaseDate(int releaseDate) {
-        this.releaseDate = releaseDate;
+    public void setDoctor(String doctor) {
+        this.doctor = doctor;
     }
 
     @Override

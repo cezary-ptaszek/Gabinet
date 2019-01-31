@@ -4,66 +4,66 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "visit")
+@Table(name = "VISIT")
 public class VisitEntity extends AbstractBaseEntity {
 
-    private String title;
-    private double price;
-    private double rating;
-    private int releaseDate;
-
+    private String doctor;
+    private String patient;
+    private String date;
+    private String info;
 
     public VisitEntity(long aId) {
         super(aId);
     }
 
-    public VisitEntity() { }
+    public VisitEntity() {
+    }
 
-    public VisitEntity(Long id, String title, double price, double rating, int releaseDate) {
+    public VisitEntity(Long id, String doctor, String patient, String date, String info) {
         this(id);
-        this.title = title;
-        this.price = price;
-        this.rating = rating;
-        this.releaseDate = releaseDate;
+        this.doctor = doctor;
+        this.patient = patient;
+        this.date = date;
+        this.info = info;
     }
 
-    public String getTitle() {
-        return title;
+    public String getDoctor() {
+        return doctor;
     }
 
-    public double getPrice() {
-        return price;
+    public void setDoctor(String doctor) {
+        this.doctor = doctor;
     }
 
-    public double getRating() {
-        return rating;
+    public String getPatient() {
+        return patient;
     }
 
-    public int getReleaseDate() {
-        return releaseDate;
+    public void setPatient(String patient) {
+        this.patient = patient;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getDate() {
+        return date;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public void setRating(double rating) {
-        this.rating = rating;
+    public String getInfo() {
+        return info;
     }
 
-    public void setReleaseDate(int releaseDate) {
-        this.releaseDate = releaseDate;
+    public void setInfo(String info) {
+        this.info = info;
     }
 
     public void update(VisitEntity aVisit) {
-        title = aVisit.getTitle();
-        price = aVisit.getPrice();
-        rating = aVisit.getRating();
-        releaseDate = aVisit.getReleaseDate();
+        doctor = aVisit.getDoctor();
+        patient = aVisit.getPatient();
+        date = aVisit.getDate();
+        info = aVisit.getInfo();
     }
 
 }
