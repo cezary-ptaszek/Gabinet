@@ -1,0 +1,56 @@
+
+.listWrapper{
+    border-style: ridge;
+    height: 80vh;
+    width: 30vw;
+    position: relative;
+    float: left;
+    margin: 0 2vw;
+}
+.listWrapper input{
+    display:block;
+    width: 95%;
+    margin: 3% auto;
+    height: 3rem;
+    font-size: 2rem;
+    border-radius: 5px;
+}
+
+.listWrapper ul{
+    background-color: black;
+}
+
+.listWrapper li{
+    padding: 10px;
+    color: #061A27;
+    list-style-type: none;
+}
+
+.listWrapper li:hover{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.listWrapper li a{
+    color: #061A27;
+    text-decoration: none ;
+    display: block;
+}
+
+.listWrapper li:nth-child(odd){
+    background-color: #B3BFBA;
+}
+
+.listWrapper li:nth-child(even){
+    background-color: #F0F4F4;
+}
+
+.listWrapper li:hover{
+    opacity:0.5;
+}
+
+
+.list {
+    overflow: auto;
+    height: 90%;
+}
