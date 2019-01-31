@@ -35,7 +35,7 @@ public class VisitRestful {
     }
 
     @POST
-    @Consumes("application/json; charset=UTF-8")
+    @Consumes("application/json")
     @Produces("application/json; charset=UTF-8")
     public Response addVisit(VisitDto aVisit) {
         VisitEntity ent = visitDao.addVisit(VisitDtoToEntity.toEntity(aVisit));
